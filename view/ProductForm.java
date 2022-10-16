@@ -109,7 +109,7 @@ public class ProductForm {
 		gbc.gridx = 1;
 		gbc.gridy = 3;
 		gbc.insets = new Insets(10, 30, 0, 0);
-		gbc.ipadx = 50;
+		gbc.ipadx = 150;
 		frame.add(longDesTextField, gbc);
 		
 		gbc = new GridBagConstraints();
@@ -122,7 +122,7 @@ public class ProductForm {
 		gbc.gridx = 1;
 		gbc.gridy = 4;
 		gbc.insets = new Insets(10, 30, 0, 0);
-		gbc.ipadx = 50;
+		gbc.ipadx = 150;
 		frame.add(itemsInTextField, gbc);
 		
 		gbc = new GridBagConstraints();
@@ -135,7 +135,7 @@ public class ProductForm {
 		gbc.gridx = 1;
 		gbc.gridy = 5;
 		gbc.insets = new Insets(10, 30, 0, 0);
-		gbc.ipadx = 50;
+		gbc.ipadx = 150;
 		frame.add(unitPriceTextField, gbc);
 		
 		gbc = new GridBagConstraints();
