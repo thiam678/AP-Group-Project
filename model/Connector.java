@@ -8,9 +8,6 @@ import javax.swing.JOptionPane;
 public class Connector {
 	private static Connection myConn = null;
 	
-	/*
-	 * TRY THIS BELOW AND YOU'LL SEE WHERE IT WENT WRONG
-	 */
 	public static Connection getDatabaseConnection() {
 		
 		if(myConn != null) {
