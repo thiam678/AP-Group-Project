@@ -1,3 +1,4 @@
+//DATE OF MEMBERSHIP EXPIRATION NOT ADDED YET
 package view;
 
 import java.awt.GridBagConstraints;
