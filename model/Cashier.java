@@ -10,7 +10,7 @@ private Department Dep;
 	
 	public Cashier(String EmpId, String name, String EmpTele, String EmpEmail, Department Depart )
 	{
-		super(EmpEmail,EmpTele,name,EmpEmail, Depart);
+		super(EmpEmail,EmpTele,name,EmpEmail);
 		this.Dep = Depart ;
 	
 	}
