@@ -34,6 +34,7 @@ public class StaffController {
             System.err.println("ERROR Creating Record: " +e.getMessage());
         }
     }
+    
     public void viewEmployeeRecord(Employee obj) throws SQLException {
     	
     	 Statement statement = StaffController.dbConn.createStatement();
@@ -51,7 +52,62 @@ public class StaffController {
                 System.err.println("Record " +e.getMessage());
             }
     	    
-
     }
+    //Updates Employee's emeail address
+    public static void updateEmployeeEmail(String empID, String empEmail) {
+		
+		String update = "UPDATE jan's_wholesale.product SET Email = '" + empEmail
+							+ "' WHERE EmployeeID = '"+ empID + "'";
+		try {
+			stmt = dbConn.createStatement();
+			affectedRows = stmt.executeUpdate(update);
+			if(affectedRows >=1) {
+				System.out.println("Email of EmployeeID"+ empID
+						+ " has been changed to " + empEmail);
+			}
+			
+		} catch (Exception e) {
+			System.err.println("Error Updating Record: "+ e.getMessage());
+		}
+	}
+	
+    //Update Employee's Telephone number
+	public static void updateEmployeeTelephone(String empID, String empTele) {
+		
+		String update = "UPDATE jan's_wholesale.product SET Telephone = '" + empTele
+							+ "' WHERE EmployeeID = '"+ empID + "'";
+		try {
+			stmt = dbConn.createStatement();
+			affectedRows = stmt.executeUpdate(update);
+			if(affectedRows >=1) {
+				System.out.println("Email of EmployeeID"+ empID
+						+ " has been changed to " + empTele);
+			}
+			
+		} catch (Exception e) {
+			System.err.println("Error Updating Record: "+ e.getMessage());
+		}
+	}
+	
+	//Delete an employee's record
+	public static void deleteEmployeeRecord(String empID) {
+		
+		String deleteRecord = "DELETE FROM jan's_wholesale.product "
+				+ "WHERE Product Code = '"+empID+"'";
+		
+		try {
+			stmt = dbConn.createStatement();
+			affectedRows = stmt.executeUpdate(deleteRecord);
+			
+			if (affectedRows == 1) {
+				System.out.println("Record Deleted Successfully");
+			}
+			
+		} catch (Exception e) {
+			System.err.println("Error Deleting Record: "+ e.getMessage());
+		}
+		
+	}
+    
 
 }
